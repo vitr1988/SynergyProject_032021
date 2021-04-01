@@ -1,4 +1,4 @@
-package ru.synergyitacademy;
+package ru.synergyitacademy.lesson1;
 
 public class Launcher {
 
@@ -9,8 +9,10 @@ public class Launcher {
      * @throws Exception список исключений, которые генерируются во время выполнения программы
      */
     public static void main(String[] args) throws Exception {
-        //TODO: переписать данный код
-        // Выведется в консоль фраза Привет, мир!
-        System.out.println("Приветствую слушателей из набора 03.2021!");
+        // пример однострочного комментария
+        /* TODO: переписать данный код
+         Выведется в консоль фраза Привет, мир!*/
+        String str = "Приветствую слушателей из набора 03.2021!";
+        System.out.println(str);
     }
 }
