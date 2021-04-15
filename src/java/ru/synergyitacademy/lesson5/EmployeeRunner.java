@@ -9,7 +9,7 @@ public class EmployeeRunner {
                 LocalDate.now(), 100_000, 40);
 //        ivanov.age = 40;
         Department ivanovDepartment = new Department();
-        ivanovDepartment.name = "IT-отдел";
+        ivanovDepartment.setName("IT-отдел");
         ivanov.setDepartment(ivanovDepartment);
 
         System.out.println(ivanov);
