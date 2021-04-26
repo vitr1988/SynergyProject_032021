@@ -1,5 +1,6 @@
 package ru.synergyitacademy.lesson8;
 
+@FunctionalInterface
 public interface Convertable {
 
     /*public static final */ int USD_RUB = 76;

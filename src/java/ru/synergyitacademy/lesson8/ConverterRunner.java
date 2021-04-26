@@ -1,5 +1,9 @@
 package ru.synergyitacademy.lesson8;
 
+import ru.synergyitacademy.lesson8.impl.EurToRubConverter;
+import ru.synergyitacademy.lesson8.impl.RubToEurConverter;
+import ru.synergyitacademy.lesson8.impl.UsdToRubConverter;
+
 public class ConverterRunner {
 
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package ru.synergyitacademy.lesson8;
+package ru.synergyitacademy.lesson8.impl;
+
+import ru.synergyitacademy.lesson8.Convertable;
 
 public class RubToUsdConverter implements Convertable {
 

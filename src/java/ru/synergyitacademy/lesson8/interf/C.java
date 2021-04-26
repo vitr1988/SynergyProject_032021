@@ -1,5 +1,7 @@
 package ru.synergyitacademy.lesson8.interf;
 
 public interface C extends A {
-    void print();
+    default void print() {
+        System.out.println("gsg");
+    }
 }
