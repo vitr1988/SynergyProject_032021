@@ -39,7 +39,8 @@ public class ClassRunner {
         System.out.println(named2Student);
 
         Method test = studentClass.getDeclaredMethod("test");
-        levelUp.invoke(named2Student);
+        test.setAccessible(true);
+        test.invoke(named2Student);
         System.out.println(named2Student);
 
         Field course = studentClass.getDeclaredField("course");

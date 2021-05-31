@@ -25,7 +25,7 @@ public class Student {
     }
 
     private void test() {
-
+        System.out.println("print smth");
     }
 
     @Override
