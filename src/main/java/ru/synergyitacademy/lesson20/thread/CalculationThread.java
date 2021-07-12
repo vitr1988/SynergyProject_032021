@@ -26,4 +26,10 @@ public class CalculationThread extends Thread {
         System.out.println(getName() + ": " + summa());
     }
 
+    @Override
+    public void start() {
+        super.start();
+        System.out.println("Calculation thread's state - " + this.getState());
+    }
+
 }

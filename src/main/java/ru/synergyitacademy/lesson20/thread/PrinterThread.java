@@ -11,7 +11,6 @@ public class PrinterThread extends Thread {
         setName(PrinterThread.class.getSimpleName());
     }
 
-
     @SneakyThrows
     @Override
     public void run() {

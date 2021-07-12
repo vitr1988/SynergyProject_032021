@@ -1,6 +1,9 @@
 package ru.synergyitacademy.lesson19;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamRunner {
@@ -11,9 +14,10 @@ public class StreamRunner {
 //        System.out.println(stream.max(Comparator.naturalOrder()).orElse(null));
 //        System.out.println(stream.reduce((a, b) -> a + b).orElse(null));
 //        System.out.println(stream.count());
-//        System.out.println(stream.collect(Collectors.toMap(Function.identity(), Object::toString, (u, v) -> {
+//        LinkedHashMap<Object, Object> collect = stream.collect(Collectors.toMap(Function.identity(), Object::toString, (u, v) -> {
 //            throw new IllegalStateException(String.format("Duplicate key %s", u));
-//        }, LinkedHashMap::new)));//TODO:
+//        }, LinkedHashMap::new));
+//        System.out.println(collect);
 //        System.out.println(stream.collect(Collectors.toMap(Function.identity(), Object::toString)));
 //        System.out.println(stream.noneMatch(i -> i >= 35));
 //        System.out.println(stream.anyMatch(i -> i == 11));
