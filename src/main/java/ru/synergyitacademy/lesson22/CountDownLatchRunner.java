@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 public class CountDownLatchRunner {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         CountDownLatch countDownLatch = new CountDownLatch(5);
 
         Runnable runnable = new Runnable() {
@@ -22,12 +22,9 @@ public class CountDownLatchRunner {
             }
         };
 
-        for (int i = 1; i <= 10; i++) {
-//            if (i == 5) {
-//                barrier.reset();
-//            }
+        for (int i = 1; i <= 5; i++) {
             new Thread(runnable).start();
-//            System.out.println("В текущий момент ожидает столько: " + barrier.getNumberWaiting());
+            Thread.sleep(1000);
         }
     }
 }

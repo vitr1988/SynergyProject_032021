@@ -7,7 +7,9 @@ public class CyclicBarrierRunner {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Программа стартовала");
-        CyclicBarrier barrier = new CyclicBarrier(1);
+        CyclicBarrier barrier = new CyclicBarrier(5, new Thread(() -> {
+            System.out.println("Все 5 потоков уперлись в барьер");
+        }));
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -22,12 +24,9 @@ public class CyclicBarrierRunner {
             }
         };
 
-        for (int i = 1; i <= 10; i++) {
-//            if (i == 5) {
-//                barrier.reset();
-//            }
+        for (int i = 1; i <= 15; i++) {
             new Thread(runnable).start();
-//            System.out.println("В текущий момент ожидает столько: " + barrier.getNumberWaiting());
+            Thread.sleep(1000);
         }
     }
 }
