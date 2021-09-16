@@ -8,12 +8,14 @@ import ru.synergyitacademy.lesson28.entity.Department;
 import ru.synergyitacademy.lesson28.entity.Employee;
 
 import java.math.BigDecimal;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class JPARunner {
 
     public static void main(String[] args) {
-        try (final Session session = getCurrentSessionFromConfig()) {
-            final Transaction transaction = session.beginTransaction();
+        runInsideSession(session -> {
             Department department = new Department();
             department.setId(188);
             department.setName("Test department");
@@ -25,7 +27,18 @@ public class JPARunner {
             employee.setDepartment(department);
             employee.setSalary(new BigDecimal("1000000"));
             session.save(employee);
+        });
 
+        runInsideSession(session -> {
+            final Department firstDepartment = session.find(Department.class, 188);
+            System.out.println(firstDepartment.getEmployees());
+        });
+    }
+
+    public static void runInsideSession(Consumer<Session> consumer) {
+        try (final Session session = getCurrentSessionFromConfig()) {
+            Transaction transaction = session.beginTransaction();
+            consumer.accept(session);
             transaction.commit();
         }
     }
