@@ -9,7 +9,8 @@ public class SpringAnnotationRunner {
 
     public static void main(String[] args) {
         final AbstractApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
-        final PersonService personService = context.getBean(PersonService.class);
+//        final PersonService personService = context.getBean(PersonService.class);
+        final PersonService personService = (PersonService) context.getBean("newPersonService");
         personService.print();
     }
 }

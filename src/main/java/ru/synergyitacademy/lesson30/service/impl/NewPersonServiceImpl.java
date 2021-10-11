@@ -1,11 +1,10 @@
 package ru.synergyitacademy.lesson30.service.impl;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import ru.synergyitacademy.lesson30.service.PersonService;
 
-@Primary
-@Component
+//@Primary
+@Component("newPersonService")
 public class NewPersonServiceImpl implements PersonService {
 
     @Override
