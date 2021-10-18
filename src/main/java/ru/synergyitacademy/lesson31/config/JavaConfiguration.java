@@ -17,7 +17,7 @@ import java.util.List;
 @Configuration
 @RequiredArgsConstructor
 @ComponentScan("ru.synergyitacademy.lesson31")
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:application_bkp.properties")
 public class JavaConfiguration {
 
     private final ru.synergyitacademy.lesson31.config.service.PropertyService propertyService;
