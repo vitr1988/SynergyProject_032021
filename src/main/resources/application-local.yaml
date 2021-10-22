@@ -1,0 +1,6 @@
+application:
+  value: 123
+  setting:
+    name: 'property'
+    value: 123
+    url: 'C:/test.txt'
