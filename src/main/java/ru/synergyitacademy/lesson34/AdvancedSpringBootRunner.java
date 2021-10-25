@@ -7,7 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import ru.synergyitacademy.lesson34.service.ConditionalService;
 import ru.synergyitacademy.lesson34.service.ExampleService;
 
-@EnableConfigurationProperties()
+@EnableConfigurationProperties
 @SpringBootApplication//(exclude = {DataSourceAutoConfiguration.class})
 public class AdvancedSpringBootRunner {
 

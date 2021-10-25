@@ -3,8 +3,15 @@ spring:
     name: the-newest-synergy-project
   main:
     banner-mode: 'off'
-
-db:
-  url: jdbc:mysql://localhost:3306/db
-  login: user
-  password: password
+  datasource:
+    url: jdbc:mysql://localhost:3306/db
+    username: user
+    password: password
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_loading_no_trans: true
+    hibernate:
+      ddl-auto: validate
