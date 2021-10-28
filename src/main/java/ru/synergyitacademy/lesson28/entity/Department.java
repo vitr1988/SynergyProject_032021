@@ -2,6 +2,7 @@ package ru.synergyitacademy.lesson28.entity;
 
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -17,6 +18,7 @@ import java.util.List;
 @ToString(exclude = {"employees"})
 @Entity
 @Table(name = "department")
+@NoArgsConstructor
 public class Department {
 
     @Id
@@ -26,4 +28,9 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
+
+    public Department(Integer departmentId, String departmentName) {
+        this.id = departmentId;
+        this.name = departmentName;
+    }
 }

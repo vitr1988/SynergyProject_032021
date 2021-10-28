@@ -15,6 +15,7 @@
         <commons-lang.version>3.11</commons-lang.version>
         <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
         <hibernate-core.version>5.4.12.Final</hibernate-core.version>
+        <spring-shell-starter.version>2.0.1.RELEASE</spring-shell-starter.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -71,6 +72,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.shell</groupId>
+            <artifactId>spring-shell-starter</artifactId>
+            <version>${spring-shell-starter.version}</version>
         </dependency>
 
         <dependency>

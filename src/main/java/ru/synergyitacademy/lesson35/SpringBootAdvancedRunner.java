@@ -10,6 +10,7 @@ import ru.synergyitacademy.lesson28.entity.Employee;
 import ru.synergyitacademy.lesson35.service.EmployeeService;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Locale;
 
 @Slf4j
@@ -36,5 +37,8 @@ public class SpringBootAdvancedRunner {
 
         final Employee otherEmployee = employeeService.findById(employee.getId());
         log.info("New founded employee with id {} has salary {}", otherEmployee.getId(), otherEmployee.getSalary());
+
+        final List<Employee> employees = employeeService.findByDepartmentId(2);
+        log.info("Employees from first department [{}] ", employees);
     }
 }
