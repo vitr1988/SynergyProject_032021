@@ -15,3 +15,8 @@ spring:
         enable_lazy_loading_no_trans: true
     hibernate:
       ddl-auto: validate
+
+server:
+  port: 8080
+  servlet:
+    context-path: /app
